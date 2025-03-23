@@ -140,6 +140,7 @@ class ParadexBot:
         processed_pairs = set()
         for account in self.accounts:
             try:
+                await self.update_jwt(account)
                 # Cancel all open orders
                 await self.api_client.cancel_orders(account.jwt)
                 logging.info(f"Cancelled all open orders for account {hex(account.account.address)}")
@@ -166,7 +167,7 @@ class ParadexBot:
                     )
 
             except Exception as e:
-                logging.error(f"Cleanup failed for account {hex(account.account.address)}")
+                logging.error(f"Cleanup failed for account {hex(account.account.address)}, error: {str(e)}")
         # Execute all cleanup tasks concurrently
         await asyncio.gather(*cleanup_tasks)
         logging.info("Cleanup completed successfully")
