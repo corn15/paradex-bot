@@ -5,6 +5,8 @@ Automated XP farming bot that randomly selects 2 accounts from a provided list t
 ## Features
 - 🎯 Random account pairing from available accounts
 - ⚖️ Automated hedge order placement
+- ⏱️ Randomized timing for position opening
+- 🎲 Randomized order size within configured range
 - 🐳 Dockerized deployment
 
 
@@ -39,3 +41,12 @@ Key configuration notes:
 ## Safety Notes
 - 🔑 Never commit your `.secrets` file
 - ⚠️ Mainnet operations involve real funds
+
+## 💖 Support & Development
+If this project brings you value, you can help ensure its continued development:
+
+🛠️ **Development Support**
+- ETH: `0xDe95B45Ebd1e09f5e7040edC0B11223cB7cCB9e4`
+- SOL: `5rWmb4p2oKK6djE8xDvsZLB7ndynspBU4vot7WERsvYF`
+
+🌱 _Your support helps maintain and improve this project!_
